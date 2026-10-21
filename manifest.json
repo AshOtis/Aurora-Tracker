@@ -1,0 +1,11 @@
+{
+  "id": "aurora-tracker",
+  "name": "Aurora Tracker",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "A small, fun tracker for making music: six synth tracks with noise and FM drums and a C64-style SID mode. Songs are plain text in your notes, with WAV and MIDI export.",
+  "author": "AshOtis",
+  "authorUrl": "https://github.com/AshOtis",
+  "fundingUrl": "https://buymeacoffee.com/ashotis",
+  "isDesktopOnly": false
+}
