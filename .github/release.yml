@@ -34,7 +34,15 @@ jobs:
 
       - name: Build
         run: python3 build.py
-
+        
+       - name: Collect release files
+        run: |
+          mkdir -p dist
+          [ -f dist/main.js ] || cp src/main.js dist/
+          [ -f dist/styles.css ] || cp src/styles.css dist/
+          cp manifest.json dist/
+          ls -l dist
+          
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v2
         with:
