@@ -1,5 +1,4 @@
-
-# Builds Daily Board when you publish a GitHub release, signs build provenance and
+# Builds Aurora Tracker when you publish a GitHub release, signs build provenance and
 # attaches main.js, manifest.json and styles.css. Usage: bump "version" in manifest.json
 # and versions.json, commit and push, then publish a release whose tag is exactly that
 # version (e.g. 1.0.1), target main. Don't upload files: this does it.
@@ -35,15 +34,7 @@ jobs:
 
       - name: Build
         run: python3 build.py
-        
-       - name: Collect release files
-        run: |
-          mkdir -p dist
-          [ -f dist/main.js ] || cp src/main.js dist/
-          [ -f dist/styles.css ] || cp src/styles.css dist/
-          cp manifest.json dist/
-          ls -l dist
-          
+
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v2
         with:
